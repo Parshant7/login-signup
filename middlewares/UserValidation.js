@@ -26,11 +26,7 @@ export const registrationValidation = [
     .matches(/^(?!\d+@)\w+([-+.']\w+)*@(?!\d+\.)\w+([-.]\w+)*\.\w+([-.]\w+)*$/)
     .withMessage("Please Enter Valid Email")
     .bail(),
-];
-
-
-export const passwordValidation = [
-  
+    
   body("password")
     .not()
     .isEmpty()

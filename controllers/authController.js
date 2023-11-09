@@ -10,6 +10,7 @@ import {
 
 import jwt from "jsonwebtoken";
 
+const maxAge = 24 * 60 * 60;
 
 // controller when user register
 export const signupController = async (req, res) => {
@@ -65,9 +66,14 @@ export const loginController = async (req, res) => {
     if (BoolPass === true) {
 
       const token = jwt.sign({ userId }, process.env.JWT_SECRET_KEY, {
-        expiresIn: "24h",
+        expiresIn: maxAge,
       });
-    
+      
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        maxAge: maxAge * 1000, 
+      });
+
       return res.status(statusCode.Created).json({
         message: messages.loginSuccess,
         ResponseStatus: responseStatus.success,

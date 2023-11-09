@@ -39,3 +39,20 @@ export const productvalidation = [
   .bail()
 
 ];
+
+
+export const productIdvalidation = [
+
+  // price should not be empty, and should be number
+  body("productId")
+  .not()
+  .isEmpty()
+  .withMessage("Please enter productId")
+  .bail()
+  .isString()
+  .withMessage("productId must be of type string.")
+  .bail()
+  .isLength(24)
+  .withMessage("Please enter a valid productId")
+  .bail(),
+];

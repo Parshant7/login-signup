@@ -7,7 +7,7 @@ const messages = {
     loginSuccess: "Successful login",
     loginError:"Login unsuccessfull",
     TokenError: "Enter token generated for authorization",
-    UnauthorizedUser: "User doesnot exists anymore",
+    UnauthorizedUser: "You are not allowed to perform this action",
     productAdded: "product successfully added",
     productAddedError: "error in adding products",
     productGetSuccess: "Successfully fetched products",
@@ -17,7 +17,8 @@ const messages = {
     likeRemoved: "unliked product",
     dislikeAdded: "liked product successfully",
     dislikeRemoved: "undisliked product", // don't if the term "undisliked" even exists
-    uploadfileError: "Please upload an image"
+    uploadfileError: "Please upload an image",
+    serverError: "Server Error, Please try again after some time"
   };
   
   const responseStatus = {
