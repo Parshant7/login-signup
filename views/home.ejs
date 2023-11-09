@@ -1,20 +1,8 @@
 <%- include('partials/header'); -%>
 
 <div class="container">
-    
-    <h1 class="mb-5">Products </h1>
+    <h1 class="mb-5">Products <span style="float: right;"> <%= name %> </span></h1>
     <div class="error other"></div>
-
-    <% products.forEach(product=>{ %>
-        <div>
-            <img src="<%= product.image %>" alt="Image Description">
-            <p><%= product.content %></p>
-            <p><%= product.price %></p>
-            <button class="likeButton" data-product="<%= product._id %>"> likes: <%= product.likes? product.likes.length : 0 %></button>
-            <button class="dislikeButton" data-product="<%= product._id %> "> dislikes: <%= product.dislikes? product.dislikes.length : 0 %></button>
-        </div>
-    <% }); %>
-
 </div>
-  
+
 <%- include('partials/footer'); -%>

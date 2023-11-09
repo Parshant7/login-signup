@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "aba387bc-71b3-45ce-932a-46f52540f504",
-		"name": "interview",
+		"name": "simpleApp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "16199302"
 	},
@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Parshant Khichi\",\n    \"email\": \"parshantkhichi@gmail.com\",\n    \"password\": \"12345678\",\n    \"confirmPassword\": \"12345678\"   \n}",
+					"raw": "{\n    \"name\": \"Parshant Khichi\",\n    \"email\": \"pk@gmail.com\",\n    \"password\": \"12345678\",\n    \"confirmPassword\": \"12345678\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"parshantkhichi@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"raw": "{\n    \"email\": \"god@gmail.com\",\n    \"password\": \"12345678\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,16 +68,10 @@
 			"name": "likeproduct",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{JWT}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"productId\": \"654641269dd732e46295ac96\"\n}",
+					"raw": "{\n    \"productId\": \"654cdc0b8d5888cec9998d90\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,14 +79,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/likeProduct/",
+					"raw": "http://localhost:3000/products/likeProduct/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"auth",
+						"products",
 						"likeProduct",
 						""
 					]
@@ -113,7 +107,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"productId\": \"654641269dd732e46295ac96\"\n}",
+					"raw": "{\n    \"productId\": \"654cdc0b8d5888cec9998d90\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,14 +115,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/dislikeProduct/",
+					"raw": "http://localhost:3000/products/dislikeProduct/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"auth",
+						"products",
 						"dislikeProduct",
 						""
 					]
@@ -174,21 +168,21 @@
 						},
 						{
 							"key": "content",
-							"value": "first product",
+							"value": "second product",
 							"description": "required",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/addProduct",
+					"raw": "http://localhost:3000/products/addProduct",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"auth",
+						"products",
 						"addProduct"
 					]
 				}
@@ -207,15 +201,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/auth/getProduct",
+					"raw": "http://localhost:3000/products/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"auth",
-						"getProduct"
+						"products",
+						""
 					]
 				}
 			},

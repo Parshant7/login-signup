@@ -41,7 +41,6 @@ $(document).ready(function() {
             // if (data.suc) {
             //     location.assign('/');
             // }
-            
         }
         catch (err) {
             console.log(err);
@@ -68,22 +67,24 @@ $(document).ready(function() {
             });
             const data = await res.json();
             console.log("this is data", data);
-
+            console.log(data.ResponseStatus);
             if (data.ResponseStatus) {
-                // for (error of data.errors){
-                //     let path = error.path;
-                //     let string = `.${path}.error`;
-                //     console.log(string, $(string));
-                //     $(string).text(error.msg);
-                // }
-                location.assign('/auth/home');
+                location.assign('/products');
             }
-            else{
-                location.assign('/auth/home');
+            else if(data.errors){
+                for (error of data.errors){
+                    let path = error.path;
+                    let string = `.${path}.error`;
+                    console.log(string, $(string));
+                    $(string).text(error.msg);
+                }
+            }else{
+                $('.loginError').text(data.message);
             }
+            alert("dfd");
         }
         catch (err) {
-            console.log(err);
+            $('.loginError').text(data.message);
         }
     });
 

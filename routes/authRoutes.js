@@ -6,7 +6,7 @@ import {
     loginController,
 }   from '../controllers/authController.js';
 
-import  { registrationValidation, loginValidation }  from '../middlewares/UserValidation.js';
+import { registrationValidation, loginValidation }  from '../middlewares/UserValidation.js';
 import { validateExpressValidatorResult } from '../helpers/valiadtionError.js';
 
 

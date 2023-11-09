@@ -132,7 +132,7 @@ export const getProductsController =  async (req, res) => {
     res.status(statusCode.Ok).json({
       messages: messages.productGetSuccess,
       ResponseStatus: responseStatus.success,
-      data: {products}
+      data: {products},
     });
 
   } catch (error) {

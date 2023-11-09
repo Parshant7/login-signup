@@ -18,7 +18,8 @@ const messages = {
     dislikeAdded: "liked product successfully",
     dislikeRemoved: "undisliked product", // don't if the term "undisliked" even exists
     uploadfileError: "Please upload an image",
-    serverError: "Server Error, Please try again after some time"
+    serverError: "Server Error, Please try again after some time",
+    fieldsError: "Please fill the fields correctly"
   };
   
   const responseStatus = {

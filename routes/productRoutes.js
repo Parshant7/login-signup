@@ -17,13 +17,11 @@ import  upload  from '../middlewares/multerUpload.js';
 
 router.use(jwtAuthenticationMiddleware)
 
-router.get('/', getProductsController);
-
-router.post('/addProduct', upload, productvalidation, validateExpressValidatorResult, addProductController);
-
-router.put('/likeProduct',productIdvalidation,validateExpressValidatorResult, likeProductController);
-
-router.put('/dislikeProduct',productIdvalidation, validateExpressValidatorResult, dislikeProductController);
-
+router.get('/', (req, res)=>{
+    const payload = {
+        name: req.user.name
+    }
+    res.render("home", payload);
+});
 
 export default router;

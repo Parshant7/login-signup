@@ -41,6 +41,7 @@ export const jwtAuthenticationMiddleware = async (req, res, next) => {
 
                 // to use userId in future for manipulation
                 req.userId = data.userId;
+                req.user = user;
                 next()
             }
         })

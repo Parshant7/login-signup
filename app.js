@@ -9,6 +9,7 @@ import cookieParser from 'cookie-parser';
 
 import authRoute from './routes/authRoutes.js';
 import productRoute from './routes/productRoutes.js';
+import productApiRoutes from './routes/api/products.js';
 import {jwtAuthenticationMiddleware} from './middlewares/jwtAuthorization.js'
 
 const app = express();
@@ -24,8 +25,9 @@ app.use(express.urlencoded({extended: true}));
 
 connectDb();
 
-app.use('/auth',authRoute);
-app.use('/products',productRoute);
+app.use('/auth', authRoute);
+app.use('/products', productRoute);
+app.use('/api/products', productApiRoutes);
 
 app.listen(PORT, ()=>{
     console.log("server is listening...");
