@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<form action="/auth/signup" method='post' class="signup">
+  <h2>Send Request</h2>
+  <div class="separate-section">
+
+    <label>Full name<input type="text" name="name" required></label><div class="name error"></div>
+    <label>Enter Email<input type="email" name="email" required></label><div class="email error"></div>
+    <label>Enter Password<input type="password" name="password" required></label><password class="password error"></password>
+    <label> Confirm Password<input type="confirmPassword" name="confirmPassword" required></label><password class="password error"></password>
+
+    <input type="submit" value="sign up">
+  </div>
+</form>
+  
+  <%- include('partials/footer'); -%>
+
+<script>
+  
+</script>

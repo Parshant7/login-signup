@@ -1,0 +1,5 @@
+db.products.create({
+    image: "/public/images/avatar.jpeg",
+    content: "first product",
+    price: 300,
+})
